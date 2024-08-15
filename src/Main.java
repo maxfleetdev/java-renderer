@@ -7,8 +7,8 @@ public class Main {
         Vertex minYVert = new Vertex(100, 500);
         Vertex midYVert = new Vertex(-600, 600);
         Vertex maxYVert = new Vertex(500, 500);
-        long previousTime = System.nanoTime();
 
+        long previousTime = System.nanoTime();
         while(true) {
             long currentTime = System.nanoTime();
             float delta = (float) ((currentTime - previousTime) / 1_000_000_000d);

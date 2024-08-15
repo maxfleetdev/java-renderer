@@ -45,7 +45,7 @@ public class RenderContext extends Bitmap {
             midYVert = temp;
         }
 
-        float area = minYVert.triangleArea(maxYVert, midYVert);
+        float area = minYVert.triangleAreaSquared(maxYVert, midYVert);
         int side = area >= 0 ? 1 : 0;
 
         scanConvertTriangle(minYVert, midYVert, maxYVert, side);

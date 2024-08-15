@@ -10,7 +10,7 @@ public class Vertex {
         this.y = y;
     }
 
-    public float triangleArea(Vertex b, Vertex c) {
+    public float triangleAreaSquared(Vertex b, Vertex c) {
         float x1 = b.getX() - x;
         float y1 = b.getY() - y;
 
