@@ -3,8 +3,10 @@ public class Main {
 
         Window window = new Window(600, 600, "Software Renderer");
         RenderContext target = window.getFrameBuffer();
-        Stars3D stars = new Stars3D(1028, 64.0f, 20.0f);
 
+        Vertex minYVert = new Vertex(100, 500);
+        Vertex midYVert = new Vertex(-600, 600);
+        Vertex maxYVert = new Vertex(500, 500);
         long previousTime = System.nanoTime();
 
         while(true) {
@@ -12,7 +14,7 @@ public class Main {
             float delta = (float) ((currentTime - previousTime) / 1_000_000_000d);
             previousTime = currentTime;
 
-            stars.updateAndRender(target, delta);
+            target.fillTriangle(maxYVert, minYVert, midYVert);
             window.swapBuffers();
         }
     }
